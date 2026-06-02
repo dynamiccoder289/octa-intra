@@ -42,8 +42,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 lg:px-8 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-accent-foreground font-bold">HR</div>
-            <span className="text-lg font-bold">Hirelink</span>
+            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-accent text-accent-foreground font-bold">OI</div>
+            <span className="text-lg font-bold">Octo-Intra Solutions</span>
           </div>
           <p className="mt-4 text-sm text-white/70 leading-relaxed">India's trusted staffing partner — connecting talent with opportunity since 2005.</p>
           <div className="mt-5 flex gap-3">
@@ -81,14 +81,14 @@ export function Footer() {
             <button className="rounded-md bg-accent px-4 text-sm font-semibold text-accent-foreground hover:opacity-90">Join</button>
           </form>
           <div className="mt-5 space-y-2 text-sm text-white/70">
-            <p className="flex items-center gap-2"><Mail size={14} /> hello@hirelink.in</p>
+            <p className="flex items-center gap-2"><Mail size={14} /> info@octo-intra.com</p>
             <p className="flex items-center gap-2"><Phone size={14} /> +91 22 4000 1234</p>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 lg:px-8 py-5 flex flex-wrap items-center justify-between gap-3 text-xs text-white/60">
-          <p>© {new Date().getFullYear()} Hirelink Staffing Pvt Ltd. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Octo-Intra Solutions Pvt Ltd. All rights reserved.</p>
           <div className="flex gap-5">
             <a href="#" className="hover:text-accent">Privacy Policy</a>
             <a href="#" className="hover:text-accent">Terms of Service</a>

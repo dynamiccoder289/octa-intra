@@ -27,7 +27,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-8 max-w-lg text-base lg:text-lg text-white/80 leading-relaxed">
-            For over two decades, Hirelink has connected India's most ambitious
+            For over two decades, Octo-Intra Solutions has connected India's most ambitious
             employers with the talent that powers their growth.
           </p>
 
@@ -35,7 +35,7 @@ export function Hero() {
             href="#about"
             className="mt-10 inline-flex items-center gap-3 border-b-2 border-white pb-2 text-sm font-bold uppercase tracking-widest text-white hover:text-accent hover:border-accent transition-colors"
           >
-            Learn more about Hirelink <ArrowRight size={16} />
+            Learn more about Octo-Intra Solutions <ArrowRight size={16} />
           </a>
         </div>
       </div>

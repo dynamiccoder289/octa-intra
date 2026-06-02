@@ -6,14 +6,14 @@ const testimonials = [
     name: "Priya Sharma",
     role: "Head of HR",
     company: "TechCorp India",
-    quote: "Hirelink helped us scale our engineering team from 50 to 200 in under a year. Their quality of candidates is unmatched.",
+    quote: "Octo-Intra Solutions helped us scale our engineering team from 50 to 200 in under a year. Their quality of candidates is unmatched.",
     initials: "PS",
   },
   {
     name: "Rajesh Kumar",
     role: "Plant Director",
     company: "Adani Industries",
-    quote: "From skilled technicians to plant managers — we trust Hirelink with all our hiring across 4 manufacturing sites.",
+    quote: "From skilled technicians to plant managers — we trust Octo-Intra Solutions with all our hiring across 4 manufacturing sites.",
     initials: "RK",
   },
   {

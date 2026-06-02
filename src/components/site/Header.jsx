@@ -51,11 +51,11 @@ const navItems = [
     label: "About Us",
     href: "#about",
     mega: {
-      heading: "About Hirelink",
+      heading: "About Octo-Intra Solutions",
       blurb: "Two decades of trust, talent and transformation.",
       items: [
         { title: "Our Story", desc: "Mission, vision & journey since 2005" },
-        { title: "Leadership", desc: "Meet the people steering Hirelink" },
+        { title: "Leadership", desc: "Meet the people steering our company" },
         { title: "Awards", desc: "Recognition from industry & clients" },
         { title: "CSR", desc: "Building inclusive opportunity at scale" },
         { title: "Press", desc: "News, media coverage & releases" },
