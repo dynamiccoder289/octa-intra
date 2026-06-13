@@ -2,61 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   SINGLE SOURCE OF TRUTH — Theme 1: Deep Tech Blue
+   All colors live here as CSS custom properties.
+   Tailwind reads these via hsl() references in tailwind.config.js
+   ============================================================ */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-    --primary-soft: 262 83% 95%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 280 100% 70%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 262 83% 58%;
-    --radius: 0.5rem;
-  }
+    /* ── Brand Palette ───────────────────────────────────────── */
+    --color-primary:      203 93% 20%;   /* #063B5C  Deep Tech Blue   */
+    --color-secondary:    180 100% 33%;  /* #00A6A6  Cyber Teal       */
+    --color-accent:       180 70% 67%;   /* #6FE7E7  Electric Cyan    */
+    --color-background:   200 60% 97%;   /* #F5FAFC  Soft White       */
+    --color-text:         210 57% 17%;   /* #102A43  Dark Navy        */
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-    --primary-soft: 262 83% 20%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 280 100% 70%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 262 83% 58%;
+    /* ── Semantic Tokens (used by Tailwind utilities) ────────── */
+    --background:         var(--color-background);
+    --foreground:         var(--color-text);
+
+    --primary:            var(--color-primary);
+    --primary-foreground: 0 0% 100%;       /* white text on primary    */
+    --primary-soft:       203 93% 94%;     /* very light tint of primary */
+
+    --secondary:          var(--color-secondary);
+    --secondary-foreground: 0 0% 100%;     /* white text on secondary  */
+
+    --accent:             var(--color-accent);
+    --accent-foreground:  var(--color-text);  /* dark text on accent   */
+
+    --muted:              200 30% 92%;     /* subtle grey-blue         */
+    --muted-foreground:   210 25% 45%;     /* mid-tone navy-grey       */
+
+    --card:               0 0% 100%;       /* pure white cards         */
+    --card-foreground:    var(--color-text);
+
+    --popover:            0 0% 100%;
+    --popover-foreground: var(--color-text);
+
+    --border:             203 30% 85%;     /* soft blue-grey border    */
+    --input:              203 30% 85%;
+    --ring:               var(--color-primary);
+
+    --destructive:        0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --radius: 0.5rem;
   }
 }
 
+/* ── Base resets ─────────────────────────────────────────────── */
 @layer base {
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

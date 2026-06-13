@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 50000, suffix: "+", label: "Placements" },
-  { value: 500, suffix: "+", label: "Clients" },
-  { value: 20, suffix: "+", label: "Years Experience" },
-  { value: 28, suffix: "", label: "Cities Pan-India" },
+  { value: 75000, suffix: "+", label: "Successful Placements" },
+  { value: 800,   suffix: "+", label: "Client Organisations" },
+  { value: 25,    suffix: "+", label: "Years of Expertise" },
+  { value: 35,    suffix: "",  label: "Cities Pan-India" },
 ];
 
 function Counter({ to, suffix }) {
@@ -20,10 +20,12 @@ function Counter({ to, suffix }) {
         if (e.isIntersecting && !started.current) {
           started.current = true;
           const start = performance.now();
-          const dur = 1600;
+          const dur = 1800;
           const step = (t) => {
             const p = Math.min((t - start) / dur, 1);
-            setN(Math.floor(p * to));
+            // ease-out cubic
+            const eased = 1 - Math.pow(1 - p, 3);
+            setN(Math.floor(eased * to));
             if (p < 1) requestAnimationFrame(step);
           };
           requestAnimationFrame(step);
@@ -35,9 +37,8 @@ function Counter({ to, suffix }) {
   }, [to]);
 
   return (
-    <span ref={ref} className="text-4xl lg:text-5xl font-bold text-primary">
-      {n.toLocaleString()}
-      {suffix}
+    <span ref={ref} className="text-4xl lg:text-5xl font-extrabold text-primary">
+      {n.toLocaleString()}{suffix}
     </span>
   );
 }
@@ -45,11 +46,11 @@ function Counter({ to, suffix }) {
 export function Stats() {
   return (
     <section className="border-y bg-primary-soft">
-      <div className="mx-auto max-w-7xl px-4 lg:px-8 py-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="mx-auto max-w-7xl px-4 lg:px-8 py-14 grid grid-cols-2 lg:grid-cols-4 gap-8">
         {stats.map((s) => (
-          <div key={s.label} className="text-center">
+          <div key={s.label} className="text-center space-y-1">
             <Counter to={s.value} suffix={s.suffix} />
-            <p className="mt-1 text-sm font-medium text-muted-foreground">{s.label}</p>
+            <p className="text-sm font-medium text-muted-foreground">{s.label}</p>
           </div>
         ))}
       </div>
